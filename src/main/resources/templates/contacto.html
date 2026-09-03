@@ -6,34 +6,50 @@
 <header th:replace="~{general/fragmentos :: header}"></header>
 
 <main class="container my-5" style="max-width: 640px;">
-    <h1 class="h3 mb-3">Visitanos</h1>
+    <h1 class="h3 mb-3"><span class="section-title">Visitanos</span></h1>
     <p class="text-muted">
-        Cafe de especialidad durante el dia y bar por la noche. Reservas para grupos,
-        catering y eventos privados: escribinos.
+        Cafe de especialidad, matcha ceremonial y reposteria artesanal en San Jose.
+        Tambien hacemos catering y estaciones de bebidas para eventos.
     </p>
 
     <ul class="list-group my-4">
+        <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fa-solid fa-location-dot fa-lg text-cosmos"></i>
+            <span>Edificio Centro Colon, Paseo Colon, San Jose</span>
+        </li>
         <li class="list-group-item d-flex align-items-center gap-3">
             <i class="fa-brands fa-instagram fa-lg text-cosmos"></i>
             <a href="https://www.instagram.com/cosmos.cafebar/" target="_blank" rel="noopener">@cosmos.cafebar</a>
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
             <i class="fa-brands fa-whatsapp fa-lg text-cosmos"></i>
-            <span class="text-muted">Numero por confirmar con el cliente</span>
-        </li>
-        <li class="list-group-item d-flex align-items-center gap-3">
-            <i class="fa-solid fa-location-dot fa-lg text-cosmos"></i>
-            <span class="text-muted">Direccion por confirmar</span>
+            <span class="text-muted">Numero por confirmar</span>
         </li>
         <li class="list-group-item d-flex align-items-center gap-3">
             <i class="fa-solid fa-clock fa-lg text-cosmos"></i>
-            <span class="text-muted">Horario por confirmar</span>
+            <span>Lunes a domingo &middot; 9:00 a.m. &ndash; 6:00 p.m.</span>
         </li>
     </ul>
 
-    <a class="btn btn-cosmos" href="https://www.instagram.com/cosmos.cafebar/" target="_blank" rel="noopener">
-        <i class="fa-brands fa-instagram"></i> Escribinos por Instagram
-    </a>
+    <div class="ratio ratio-16x9 rounded overflow-hidden mb-3">
+        <iframe title="Ubicacion de Cosmos Cafe" style="border:0" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=Cosmos%20Cafe%20Edificio%20Centro%20Colon%20San%20Jose&z=17&output=embed"></iframe>
+    </div>
+
+    <div class="d-flex gap-2 flex-wrap">
+        <a class="btn btn-cosmos" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/dir/?api=1&amp;destination=Cosmos%20Cafe%2C%20Edificio%20Centro%20Colon%2C%20San%20Jose">
+            <i class="fa-brands fa-google"></i> Google Maps
+        </a>
+        <a class="btn btn-mint" target="_blank" rel="noopener"
+           href="https://www.waze.com/ul?ll=9.9358506%2C-84.0963399&amp;navigate=yes">
+            <i class="fa-brands fa-waze"></i> Waze
+        </a>
+        <a class="btn btn-outline-dark" href="https://www.instagram.com/cosmos.cafebar/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+    </div>
 </main>
 
 <footer th:replace="~{general/fragmentos :: footer}"></footer>

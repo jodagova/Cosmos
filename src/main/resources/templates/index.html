@@ -7,14 +7,16 @@
 <header th:replace="~{general/fragmentos :: header}"></header>
 
 <section class="hero-cosmos">
-    <div class="container text-center">
-        <span class="brand-nombre hero-wordmark d-block mb-3">COSMOS</span>
-        <h1 class="display-6 fw-bold" th:text="#{app.eslogan}">Cafe de dia, bar de noche</h1>
-        <p class="lead" th:text="#{app.subeslogan}">Un lugar para encontrarse</p>
-        <a class="btn btn-cosmos btn-lg mt-2" th:href="@{/menu}">Ver el menu</a>
-        <a class="btn btn-outline-light btn-lg mt-2" href="https://www.instagram.com/cosmos.cafebar/" target="_blank" rel="noopener">
-            <i class="fa-brands fa-instagram"></i> Instagram
-        </a>
+    <div class="container">
+        <span class="logo-badge hero-logo" role="img" aria-label="Cosmos"></span>
+        <h1 th:text="#{app.eslogan}">Bebidas de otro planeta</h1>
+        <p class="lead" th:text="#{app.subeslogan}">Cafe de especialidad, matcha y reposteria en San Jose</p>
+        <div class="d-flex gap-2 justify-content-center flex-wrap mt-3">
+            <a class="btn btn-cosmos btn-lg" th:href="@{/menu}">Ver el menu</a>
+            <a class="btn btn-mint btn-lg" href="https://www.instagram.com/cosmos.cafebar/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+        </div>
     </div>
 </section>
 
@@ -24,24 +26,25 @@
         Aun no hay categorias registradas. Ingresa como administrador para cargar el menu.
     </div>
 
-    <h2 class="h4 mb-3">El menu</h2>
+    <h2 class="h4 mb-4"><span class="section-title">El menu</span></h2>
     <div class="row g-3 mb-5">
         <div class="col-6 col-md-3" th:each="c : ${categorias}">
             <a class="text-decoration-none" th:href="@{'/menu/categoria/' + ${c.idCategoria}}">
                 <div class="card h-100 text-center categoria-card">
                     <div class="card-body">
                         <i class="fa-solid fa-mug-hot fa-2x mb-2 text-cosmos"></i>
-                        <h3 class="h6 mb-0" th:text="${c.descripcion}">Cafe</h3>
+                        <h3 class="h6 mb-0 text-dark" th:text="${c.descripcion}">Matcha</h3>
                     </div>
                 </div>
             </a>
         </div>
     </div>
 
-    <h2 class="h4 mb-3">Recomendados</h2>
-    <div class="row g-4">
+    <h2 class="h4 mb-4"><span class="section-title">Recomendados</span></h2>
+    <div class="row g-4 mb-5">
         <div class="col-12 col-sm-6 col-lg-4" th:each="p : ${destacados}">
             <div class="card h-100 producto-card">
+                <img th:if="${p.rutaImagen != null}" th:src="@{${p.rutaImagen}}" class="card-img-top" alt=""/>
                 <div class="card-body">
                     <h3 class="h5" th:text="${p.nombre}">Producto</h3>
                     <p class="text-muted small" th:text="${p.descripcion}">Descripcion</p>
@@ -58,6 +61,16 @@
             <p class="text-muted">Todavia no hay recomendados.</p>
         </div>
     </div>
+
+    <h2 class="h4 mb-4"><span class="section-title">Galeria</span></h2>
+    <div class="row g-3 galeria">
+        <div class="col-6 col-md-3"><img th:src="@{/img/drinks-tray.jpg}" alt="Bebidas Cosmos"/></div>
+        <div class="col-6 col-md-3"><img th:src="@{/img/cup-branded.jpg}" alt="Vaso Cosmos"/></div>
+        <div class="col-6 col-md-3"><img th:src="@{/img/pastry-cinnamon.jpg}" alt="Reposteria"/></div>
+        <div class="col-6 col-md-3"><img th:src="@{/img/drinks-duo.jpg}" alt="Bebidas de autor"/></div>
+    </div>
+    <!-- TODO: agregar fotos del local ("El lugar") cuando el cliente las envie -->
+
 </main>
 
 <footer th:replace="~{general/fragmentos :: footer}"></footer>

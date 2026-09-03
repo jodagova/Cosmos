@@ -32,6 +32,7 @@ public class ConfiguracionSeguridad {
                         "/css/**",
                         "/js/**",
                         "/img/**",
+                        "/favicon.ico",
                         "/webjars/**",
                         "/h2-console/**"
                 ).permitAll()
