@@ -10,7 +10,7 @@
         </goals>
         <properties>
             <run.jvmArguments>-XX:TieredStopAtLevel=1</run.jvmArguments>
-            <spring-boot.run.main-class>com.cosmos.CosmosApplication</spring-boot.run.main-class>
+            <run.main-class>com.cosmos.CosmosApplication</run.main-class>
             <Env.SPRING_OUTPUT_ANSI_ENABLED>always</Env.SPRING_OUTPUT_ANSI_ENABLED>
         </properties>
     </action>
@@ -24,7 +24,7 @@
         </goals>
         <properties>
             <run.jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -XX:TieredStopAtLevel=1</run.jvmArguments>
-            <spring-boot.run.main-class>com.cosmos.CosmosApplication</spring-boot.run.main-class>
+            <run.main-class>com.cosmos.CosmosApplication</run.main-class>
             <Env.SPRING_OUTPUT_ANSI_ENABLED>always</Env.SPRING_OUTPUT_ANSI_ENABLED>
             <jpda.listen>true</jpda.listen>
         </properties>
@@ -38,7 +38,7 @@
             <goal>spring-boot:run</goal>
         </goals>
         <properties>
-            <spring-boot.run.main-class>com.cosmos.CosmosApplication</spring-boot.run.main-class>
+            <run.main-class>com.cosmos.CosmosApplication</run.main-class>
             <Env.SPRING_OUTPUT_ANSI_ENABLED>always</Env.SPRING_OUTPUT_ANSI_ENABLED>
         </properties>
     </action>
