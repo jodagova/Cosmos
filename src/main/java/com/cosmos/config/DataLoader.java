@@ -58,7 +58,6 @@ public class DataLoader {
                 Categoria cafe = categoria(categoriaRepo, "Cafe");
                 Categoria frios = categoria(categoriaRepo, "Frios de autor");
                 Categoria reposteria = categoria(categoriaRepo, "Reposteria");
-                Categoria eventos = categoria(categoriaRepo, "Catering & eventos");
 
                 productoRepo.saveAll(List.of(
                         producto("Matcha marshmallow", "Matcha ceremonial, leche y malvavisco tostado", "3200", matcha, true, "/img/drink-matcha.jpg"),
@@ -72,9 +71,7 @@ public class DataLoader {
                         producto("Limonada Cosmos", "Limon, hierbabuena y soda", "1900", frios, false, null),
                         producto("Cinnamon roll con arandanos", "Horneado del dia con glaseado y arandanos", "2800", reposteria, true, "/img/pastry-cinnamon.jpg"),
                         producto("Brownie con helado", "Brownie tibio y helado de vainilla", "2600", reposteria, false, null),
-                        producto("Cheesecake", "Porcion con salsa de frutos rojos", "2800", reposteria, false, null),
-                        producto("Mesa de bebidas para eventos", "Estacion de matcha y cafe para tu evento", null, eventos, false, null),
-                        producto("Cajas y pedidos especiales", "Reposteria por encargo, consultar por Instagram", null, eventos, false, null)
+                        producto("Cheesecake", "Porcion con salsa de frutos rojos", "2800", reposteria, false, null)
                 ));
             }
         };

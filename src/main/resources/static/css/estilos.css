@@ -137,6 +137,13 @@ h1, h2, h3, .display-6, .brand-nombre {
     border-radius: 10px;
 }
 
+.lugar-foto {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
 /* FORMULARIOS */
 .form-control:focus {
     border-color: var(--orange);
