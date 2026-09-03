@@ -1,0 +1,9 @@
+# Copiar a application-local.properties (ignorado por Git) para desarrollo local
+# con credenciales reales. Activar con: SPRING_PROFILES_ACTIVE=prod,local
+#
+# spring.datasource.url=jdbc:postgresql://<host>.neon.tech/cosmos?sslmode=require
+# spring.datasource.username=
+# spring.datasource.password=
+#
+# spring.mail.username=
+# spring.mail.password=

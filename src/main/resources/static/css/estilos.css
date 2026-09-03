@@ -1,0 +1,135 @@
+:root {
+    --space: #0e1030;        /* azul noche profundo */
+    --space-2: #171a44;      /* superficie */
+    --nebula: #6f4cf0;       /* violeta */
+    --amber: #f2b134;        /* dorado ambar (acento) */
+    --ink: #e9e9f4;          /* texto sobre oscuro */
+    --muted: #a7a9c8;
+}
+
+body {
+    background-color: var(--space);
+    color: var(--ink);
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+h1, h2, h3, .brand-nombre {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.text-muted { color: var(--muted) !important; }
+
+/* NAVBAR */
+.navbar-cosmos {
+    background-color: rgba(14, 16, 48, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-cosmos .nav-link,
+.navbar-cosmos .navbar-text {
+    color: var(--ink) !important;
+    font-weight: 500;
+}
+
+.navbar-cosmos .nav-link:hover { color: var(--amber) !important; }
+
+.brand-icon { color: var(--amber); font-size: 1.1rem; }
+
+.brand-nombre {
+    color: var(--ink);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+}
+
+/* HERO */
+.hero-cosmos {
+    background:
+        radial-gradient(1200px 400px at 50% -10%, rgba(111, 76, 240, 0.45), transparent 70%),
+        radial-gradient(800px 300px at 80% 20%, rgba(242, 177, 52, 0.18), transparent 70%),
+        var(--space);
+    padding: 5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-wordmark {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    letter-spacing: 0.32em;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(111, 76, 240, 0.6);
+}
+
+.hero-cosmos h1 { color: #fff; }
+.hero-cosmos .lead { color: var(--muted); }
+
+/* BOTONES */
+.btn-cosmos {
+    background-color: var(--amber);
+    border-color: var(--amber);
+    color: #1b1400;
+    font-weight: 600;
+}
+
+.btn-cosmos:hover {
+    background-color: #ffc65a;
+    border-color: #ffc65a;
+    color: #1b1400;
+}
+
+.hero-cosmos .btn-outline-light { border-color: rgba(255, 255, 255, 0.5); }
+
+.text-cosmos { color: var(--amber) !important; }
+
+/* TARJETAS */
+.categoria-card,
+.producto-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: var(--space-2);
+    color: var(--ink);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.categoria-card:hover,
+.producto-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--amber);
+}
+
+.producto-card .text-bg-light {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--muted) !important;
+}
+
+.badge-bajopedido {
+    background-color: var(--nebula);
+    color: #fff;
+}
+
+/* FORMULARIOS */
+.form-control {
+    background-color: var(--space-2);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--ink);
+}
+.form-control:focus {
+    background-color: var(--space-2);
+    color: var(--ink);
+    border-color: var(--amber);
+    box-shadow: 0 0 0 0.2rem rgba(242, 177, 52, 0.25);
+}
+.list-group-item {
+    background-color: var(--space-2);
+    color: var(--ink);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* FOOTER */
+.footer-cosmos {
+    background-color: #0a0b22;
+    color: var(--muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer-cosmos a { color: var(--ink); }
+.footer-cosmos .brand-nombre { font-size: 1rem; }

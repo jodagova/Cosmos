@@ -1,0 +1,22 @@
+# Postgres local para pruebas "prod-like" (opcional).
+# El desarrollo normal usa H2 en memoria (perfil dev) y NO necesita esto.
+#
+#   docker compose up -d
+#   set SPRING_PROFILES_ACTIVE=prod   (las credenciales por defecto ya coinciden)
+#   .\mvnw spring-boot:run
+#
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: cosmos-db
+    environment:
+      POSTGRES_DB: cosmos
+      POSTGRES_USER: cosmos
+      POSTGRES_PASSWORD: cosmos
+    ports:
+      - "5432:5432"
+    volumes:
+      - cosmos_pgdata:/var/lib/postgresql/data
+
+volumes:
+  cosmos_pgdata:

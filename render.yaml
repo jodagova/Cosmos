@@ -1,0 +1,25 @@
+# Blueprint de Render. Al conectar el repo, Render detecta este archivo
+# y crea el servicio automaticamente.
+services:
+  - type: web
+    name: cosmos-cafebar
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      # DEMO: perfil dev = H2 en memoria (los datos se reinician en cada deploy).
+      - key: SPRING_PROFILES_ACTIVE
+        value: dev
+      - key: APP_ADMIN_USERNAME
+        value: admin
+      - key: APP_ADMIN_PASSWORD
+        generateValue: true
+
+      # PRODUCCION con Postgres (Neon): cambiar SPRING_PROFILES_ACTIVE a "prod"
+      # y definir estas variables en el dashboard de Render (Environment):
+      #   DB_URL       jdbc:postgresql://<host>.neon.tech/<db>?sslmode=require
+      #   DB_USERNAME
+      #   DB_PASSWORD

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{general/fragmentos :: head}"></head>
+<body>
+
+<header th:replace="~{general/fragmentos :: header}"></header>
+
+<main class="container my-5" style="max-width: 640px;">
+    <h1 class="h3 mb-3">Visitanos</h1>
+    <p class="text-muted">
+        Cafe de especialidad durante el dia y bar por la noche. Reservas para grupos,
+        catering y eventos privados: escribinos.
+    </p>
+
+    <ul class="list-group my-4">
+        <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fa-brands fa-instagram fa-lg text-cosmos"></i>
+            <a href="https://www.instagram.com/cosmos.cafebar/" target="_blank" rel="noopener">@cosmos.cafebar</a>
+        </li>
+        <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fa-brands fa-whatsapp fa-lg text-cosmos"></i>
+            <span class="text-muted">Numero por confirmar con el cliente</span>
+        </li>
+        <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fa-solid fa-location-dot fa-lg text-cosmos"></i>
+            <span class="text-muted">Direccion por confirmar</span>
+        </li>
+        <li class="list-group-item d-flex align-items-center gap-3">
+            <i class="fa-solid fa-clock fa-lg text-cosmos"></i>
+            <span class="text-muted">Horario por confirmar</span>
+        </li>
+    </ul>
+
+    <a class="btn btn-cosmos" href="https://www.instagram.com/cosmos.cafebar/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i> Escribinos por Instagram
+    </a>
+</main>
+
+<footer th:replace="~{general/fragmentos :: footer}"></footer>
+</body>
+</html>
