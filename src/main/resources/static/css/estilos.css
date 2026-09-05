@@ -74,8 +74,10 @@ h1, h2, h3, .display-6, .brand-nombre {
 }
 .hero-cosmos h1 {
     color: #fff;
-    font-size: clamp(2.2rem, 6vw, 3.6rem);
-    text-transform: uppercase;
+    font-size: clamp(1.9rem, 4.6vw, 2.9rem);
+    max-width: 16ch;
+    margin-inline: auto;
+    line-height: 1.15;
 }
 .hero-cosmos .lead { color: rgba(255, 255, 255, 0.85); }
 
