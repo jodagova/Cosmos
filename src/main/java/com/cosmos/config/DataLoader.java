@@ -56,7 +56,7 @@ public class DataLoader {
                 // Datos de ejemplo (placeholder). Reemplazar por el menu real del cliente.
                 Categoria matcha = categoria(categoriaRepo, "Matcha");
                 Categoria cafe = categoria(categoriaRepo, "Cafe");
-                Categoria frios = categoria(categoriaRepo, "Frios de autor");
+                Categoria frios = categoria(categoriaRepo, "Bebidas frias");
                 Categoria reposteria = categoria(categoriaRepo, "Reposteria");
 
                 productoRepo.saveAll(List.of(
